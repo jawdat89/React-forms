@@ -12,6 +12,10 @@ const SimpleInput = (props) => {
   const formSubmissionHandler = (event) => {
     event.preventDefault(); // to disable the default behaviour of the form tag
 
+    if (enteredName.trim() === '') {
+      return;
+    }
+
     console.log(enteredName);
 
     // nameInputRef.current.value = ''; // Not IDEAL. DO NOT MANIPULATE THE DOM
